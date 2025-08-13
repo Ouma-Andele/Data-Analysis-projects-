@@ -35,9 +35,9 @@ Tools: R, ggplot2, dplyr, shiny
 Key Steps: Data collection, quality assessment, trend analysis, and interactive dashboard creation.
 Outputs: Dynamic visualizations, statistical summaries, and an interactive web application.
 
-📜 View Full Analysis Report
+📜 .[View Full Analysis Report]
 
-### 4.✍️ Kitui County Audit Report
+### 5.✍️ Kitui County Audit Report
 This report presents findings from an audit of Kitui County's financial records and operational procedures.
 
 Author: Earnest Andele
@@ -46,7 +46,7 @@ Key Steps: Data collection, financial analysis, and drafting of findings.
 
 Outputs: An HTML report detailing the audit results.
 
-📜 View Full HTML Report
+📜 .[View Full HTML Report]
 
 
 ---
