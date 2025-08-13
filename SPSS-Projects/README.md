@@ -8,8 +8,6 @@ Each project includes SPSS `.sav` data files, output files, and supporting docum
 
 ## 📜 Projects
 
-# 📊 Analysis of SPSS Output Projects
-
 ## SPSS Output Analysis Summary
 
 The Week 8 SPSS output presents comprehensive frequency distributions and cross-tabulation analyses from a survey of 2,000 respondents. Key findings include:
