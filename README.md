@@ -26,5 +26,5 @@ Each project folder contains datasets, scripts, and documentation.
 ---
 
 💡 **Contact Me**
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+- LinkedIn: [Earnest Ouma](https://www.linkedin.com/in/earnest-ouma-andele)
 - Email: earnestouma1@gmail.com 
