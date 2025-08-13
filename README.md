@@ -7,7 +7,7 @@ These projects demonstrate my skills in data cleaning, exploratory data analysis
 
 ## 📂 Project Categories
 
-### 🔹 [R Projects](https://github.com/yourusername/portfolio/tree/main/R-Projects)
+### 🔹 [R Projects](https://github.com/ouma-andele/portfolio/tree/main/R-Projects)
 R programming projects covering data cleaning, exploratory analysis, visualization, and statistical modeling.  
 Example projects:
 - Week 6 Dataset Analysis — EDA and visualization in R.  
@@ -15,14 +15,14 @@ Example projects:
 
 ---
 
-### 🔹 [Python Projects](https://github.com/yourusername/portfolio/tree/main/Python-Projects)
+### 🔹 [Python Projects](https://github.com/ouma-andele/portfolio/tree/main/Python-Projects)
 Python projects for data analysis, automation, visualization, and machine learning.  
 Example projects:
 - Data import, cleaning, visualization, and modeling in Jupyter Notebooks.
 
 ---
 
-### 🔹 [Excel Projects](https://github.com/yourusername/portfolio/tree/main/Excel-Dashboards)
+### 🔹 [Excel Projects](https://github.com/ouma-andele/portfolio/tree/main/Excel-Dashboards)
 Excel dashboards and analyses using formulas, PivotTables, charts, and macros.  
 Example projects:
 - Week 11 Stock EDA — Trendlines and PivotTables on stock market data.  
@@ -38,7 +38,7 @@ Example projects:
 
 ---
 
-### 🔹 [PSPP Projects](https://github.com/yourusername/portfolio/tree/main/PSPP-Projects)
+### 🔹 [PSPP Projects](https://github.com/ouma-andele/portfolio/tree/main/PSPP-Projects)
 PSPP statistical projects focusing on descriptive reporting and inferential analysis.  
 Example projects:
 - Week 4 PSPP Output — Correlation and descriptive analysis.
@@ -48,7 +48,7 @@ Example projects:
 ## 📧 Contact Me
 - **Email:** earnestouma1@gmail.com 
 - **LinkedIn:** [Earnest Ouma](https://www.linkedin.com/in/earnest-ouma-andele)  
-- **GitHub:** [Your GitHub Profile](https://github.com/yourusername)
+- **GitHub:** [ouma-andele](https://github.com/ouma-andele)
 
 ---
 
