@@ -19,7 +19,7 @@ Each project includes scripts, datasets, and output reports (Jupyter Notebooks, 
 
     📜 Prepared by **Earnest Ouma Andele**
 
-### 2. Exploratory Data Analysis of Titanic Passenger Survival
+### 2. [Exploratory Data Analysis of Titanic Passenger Survival]
 - **Description:** Identify key factors influencing passenger survival using Titanic passenger records dataset (n=5,000).
 - **Key Steps:** 
   - Data import and setup
@@ -27,20 +27,18 @@ Each project includes scripts, datasets, and output reports (Jupyter Notebooks, 
   - Survival distribution analysis
   - Passenger class distribution
   - Visualization using matplotlib and seaborn
-- **Files:** [View Notebook](Week 9 python project.ipynb)
+- **Files:** [View Notebook]
+- (Week 9 python project.ipynb)
 
     📜 Prepared by **Earnest Ouma Andele**
 
-  ### 3. [Customer Reviews Analysis]
+### 3. [Customer Reviews Analysis]
 - **Description:** This project analyzes customer reviews to understand sentiment, product performance, and review patterns. The dataset includes reviews for various products, with ratings and text content.
 - **Key Steps:** 
   - Data import and initial exploration
   - Text cleaning (removing special characters, emojis, and numbers)
   - Sentiment analysis based on ratings
-  - Visualization of review distribution and product performance
-- **Files:** [View Notebook](WEEK%205%20Python%20Project-1.ipynb)
+  - Visualization of review distribution and product performance **Files:** [View Notebook](WEEK%205%20Python%20Project-1.ipynb)
 
   📜 Prepared by **Earnest Ouma Andele**
 ---
-
-📌 More Python projects will be added regularly.
