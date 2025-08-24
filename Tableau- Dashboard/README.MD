@@ -16,7 +16,9 @@ Each project includes interactive dashboards, visual analysis, and key insights 
 - **Skills Demonstrated:** Data cleaning, calculated fields, parameters, LOD expressions, dashboard design, UX optimization.  
 - **Files & Links:**  
   - 📂 COVID-19 Dashboard Solution (week13)
-Prepared by Earnest Ouma Andele 
+
+
+## 📜 Prepared by **Earnest Ouma Andele**
 ---
 
 📌 More Tableau projects will be added regularly.
