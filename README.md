@@ -1,6 +1,6 @@
 # 📊 Data Science & Statistics Portfolio
 
-Welcome to my portfolio — a collection of projects in **R**, **Python**, **Excel**, **SPSS**, and **PSPP**.  
+Welcome to my portfolio — a collection of projects in **R**, **Python**, **Excel**, **SPSS**, **Tableau** and **PSPP**.  
 These projects demonstrate my skills in data cleaning, exploratory data analysis (EDA), visualization, statistical modeling, and reporting.
 
 ---
@@ -45,7 +45,7 @@ Example projects:
 
 ---
 
-### 🔹 [Tableau Dashboards](https://github.com/ouma-andele/portfolio/tree/main/Tableau- Dashboards)
+### 🔹 [Tableau Dashboards](https://github.com/ouma-andele/portfolio/tree/main/Tableau-Dashboards)
 ---
 
 Tableau projects showcasing interactive dashboards, advanced visualizations, and data storytelling.  
