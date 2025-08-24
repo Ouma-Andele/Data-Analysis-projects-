@@ -1,1 +1,1 @@
-
+This repository contains a collection of my Tableau projects, showcasing skills in data cleaning, visualization, dashboard design, and storytelling. Each project includes interactive dashboards, detailed analysis, and key insights derived from the data.
