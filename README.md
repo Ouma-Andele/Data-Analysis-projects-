@@ -45,7 +45,7 @@ Example projects:
 
 ---
 
-### 🔹 [Tableau Projects](https://github.com/ouma-andele/portfolio/tree/main/Tableau-Dashboard)
+### 🔹 [Tableau Dashboards](https://github.com/ouma-andele/portfolio/tree/main/Tableau- Dashboards)
 ---
 
 Tableau projects showcasing interactive dashboards, advanced visualizations, and data storytelling.  
