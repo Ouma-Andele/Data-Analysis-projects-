@@ -31,7 +31,7 @@ Example projects:
 
 ---
 
-### 🔹 [SPSS Projects](https://github.com/yourusername/portfolio/tree/main/SPSS-Projects)
+### 🔹 [SPSS Projects](https://github.com/ouma-andele/portfolio/tree/main/SPSS-Projects)
 SPSS-based statistical analyses, including descriptive and inferential testing.  
 Example projects:
 - Week 8 SPSS Output — Descriptive statistics and hypothesis testing.
@@ -42,6 +42,13 @@ Example projects:
 PSPP statistical projects focusing on descriptive reporting and inferential analysis.  
 Example projects:
 - Week 4 PSPP Output — Correlation and descriptive analysis.
+
+---
+
+### 🔹 [Tableau Projects](https://github.com/ouma-andele/portfolio/tree/main/Tableau-Dashboard)
+---
+
+Tableau projects showcasing interactive dashboards, advanced visualizations, and data storytelling.  
 
 ---
 
