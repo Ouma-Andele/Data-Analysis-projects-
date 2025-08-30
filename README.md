@@ -1,6 +1,6 @@
 # 📊 Data Science & Statistics Portfolio
 
-Welcome to my portfolio — a collection of projects in **R**, **Python**, **Excel**, **SPSS**, **Tableau** and **PSPP**.  
+Welcome to my portfolio — a collection of projects in **R**, **Python**, **Excel**, **SPSS**, **Tableau**, **PowerBI** and **PSPP**.  
 These projects demonstrate my skills in data cleaning, exploratory data analysis (EDA), visualization, statistical modeling, and reporting.
 
 ---
@@ -53,7 +53,7 @@ Example projects:
 
 ---
 
-### 🔹  [Power BI Dashboard](https://github.com/ouma-andele/portfolio/tree/main/Power BI-Dashboards)
+### 🔹  [Power BI Dashboard](https://github.com/ouma-andele/portfolio/tree/main/PowerBI-Dashboards)
 
 Power BI projects highlighting business intelligence, KPI tracking, and interactive dashboards for decision-making.  
 
