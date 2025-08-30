@@ -46,12 +46,20 @@ Example projects:
 ---
 
 ### 🔹 [Tableau Dashboards](https://github.com/ouma-andele/portfolio/tree/main/Tableau-Dashboards)
----
 
 Tableau projects showcasing interactive dashboards, advanced visualizations, and data storytelling. 
 Example projects: 
 - COVID-19 Dashboard Solution.
+
 ---
+
+### 🔹  [Power BI Dashboard](https://github.com/ouma-andele/portfolio/tree/main/Power BI-Dashboards)
+
+Power BI projects highlighting business intelligence, KPI tracking, and interactive dashboards for decision-making.  
+
+---
+
+
 
 ## 📧 Contact Me
 - **Email:** earnestouma1@gmail.com 
