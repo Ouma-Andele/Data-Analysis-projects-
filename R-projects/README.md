@@ -50,5 +50,9 @@ Outputs: An HTML report detailing the audit results.
 
 📜 .[View Full HTML Report]
 
-
+### 6. Week 16 - Retail Sales Analysis
+- **Description:** Analyzed retail sales data across 5 regions and 5 product categories to assess performance, profitability, customer behavior, and operational efficiency.  
+- **Key Steps:** Data cleaning, descriptive statistics, trend analysis, correlation analysis, and visualization with **ggplot2**.  
+- **Files:** [View HTML Report](Week16_retail_sales_report.html) | [Download R Script](retail_sales_analysis.R)
+  📜 .[View Full HTML Report]
 ---
