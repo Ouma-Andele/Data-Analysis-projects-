@@ -56,3 +56,5 @@ Outputs: An HTML report detailing the audit results.
 - **Files:** [View HTML Report](Week16_retail_sales_report.html) | [Download R Script](retail_sales_analysis.R)
   📜 .[View Full HTML Report]
 ---
+
+📌 More PSPP projects will be added regularly.
