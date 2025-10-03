@@ -57,4 +57,4 @@ Outputs: An HTML report detailing the audit results.
   📜 .[View Full HTML Report]
 ---
 
-📌 More PSPP projects will be added regularly.
+📌 More projects will be added regularly.
