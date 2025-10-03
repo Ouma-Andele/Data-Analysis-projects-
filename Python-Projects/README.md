@@ -44,3 +44,5 @@ Each project includes scripts, datasets, and output reports (Jupyter Notebooks, 
 
   📜 Prepared by **Earnest Ouma Andele**
 ---
+
+📌 More projects will be added regularly
