@@ -59,7 +59,11 @@ Power BI projects highlighting business intelligence, KPI tracking, and interact
 
 ---
 
+### 🔹  [N8N projects](https://github.com/ouma-andele/portfolio/tree/main/N8N-project)
 
+n8n workflow automation projects demonstrating no-code/low-code data processing, logic design, and task automation.  
+
+---
 
 ## 📧 Contact Me
 - **Email:** earnestouma1@gmail.com 
