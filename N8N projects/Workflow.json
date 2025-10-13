@@ -1,0 +1,136 @@
+{
+  "name": "Workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "23ab2ab2-ee42-4aa3-8e00-7b2a57abc309",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7676a706-655a-43f9-ad6b-1f48bf5461cb",
+              "name": "List of Names",
+              "value": "[ \"Earnest\",  \"Alice\",   \"Bob\",    \"Eva\",   \"Charlie\",   \"Emma\",   \"David\",   \"Ethan\",   \"Frank\" ]",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        224,
+        0
+      ],
+      "id": "436e421b-6e3f-4a6b-934c-f797b156f1c4",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the list of names from the previous node\nconst names = $input.all();\n\nconsole.log('Raw input:', JSON.stringify(names, null, 2));\n\n// The Manual Trigger sends the array as a single item\n// Extract the array from the first item\nconst nameArray = names[0].json['List of Names'];\n\nconsole.log('Name array:', nameArray);\n\n// Filter names that start with \"E\"\nconst filteredNames = nameArray.filter(name => \n  name && typeof name === 'string' && name.trim().toUpperCase().startsWith('E')\n);\n\nconsole.log('Filtered names:', filteredNames);\n\n// Return the filtered names as individual items\nreturn filteredNames.map(name => {\n  return {\n    json: {\n      original_name: name\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        448,
+        0
+      ],
+      "id": "c9166e2d-c464-460f-a424-fb45bef9294a",
+      "name": "Code in JavaScript",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get all filtered names\nconst items = $input.all();\n\n// Add custom greeting to each name\nconst greetedItems = items.map(item => {\n  const name = item.json.original_name;\n  return {\n    json: {\n      name: name,\n      greeting: `Hello ${name}! Welcome to the E-name club!`,\n      timestamp: new Date().toISOString()\n    }\n  };\n});\n\nreturn greetedItems;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        0
+      ],
+      "id": "f4975396-e5a9-485e-9aa9-9633048cc162",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "category": "doNothing"
+      },
+      "type": "n8n-nodes-base.debugHelper",
+      "typeVersion": 1,
+      "position": [
+        880,
+        0
+      ],
+      "id": "a3d2894b-da06-41d3-921a-d859c044e9c8",
+      "name": "DebugHelper"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "DebugHelper",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "25b414fe-573c-4932-b0a9-3322a790ddc2",
+  "meta": {
+    "instanceId": "3a397c18810408374f1731f2744c2733a2307f111b69413a7ecd0cca5ab48586"
+  },
+  "id": "e6VTtDw1kwFW06nH",
+  "tags": []
+}
