@@ -25,5 +25,6 @@ Each project includes a JSON workflow file, workflow description, and usage inst
 - **Files:** [Download Workflow File](ai-csv-insight-bot-workflow.json)
 
 ---
+📜 Prepared by Earnest Ouma Andele
 
 📌 More n8n automation projects will be added regularly.
