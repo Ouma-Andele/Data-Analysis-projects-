@@ -7,7 +7,6 @@ This folder contains my **n8n workflow automation projects**, showcasing how I u
 Each project includes a JSON workflow file, workflow description, and usage instructions.
 
 ---
-
 ## 📜 Projects
 
 ### 1. Workflow: Greet E Names
@@ -15,6 +14,15 @@ Each project includes a JSON workflow file, workflow description, and usage inst
 - **Key Steps:** Input list of names, filter by letter “E,” add greeting messages, and display results.  
 - **Nodes Used:** Manual Trigger, Code, Debug Helper.  
 - **Files:** [Download Workflow File](greet-e-names-workflow.json)
+
+
+---
+
+### 2. Workflow: AI CSV Insight Bot (RAG Workflow)
+- **Description:** Builds an AI-powered assistant that answers questions from CSV data using Retrieval-Augmented Generation (RAG) principles.  
+- **Key Steps:** Ingest CSV → Generate embeddings → Store vectors → Query via AI model.  
+- **Nodes Used:** Read/Write Files, Extract from File, Embeddings (OpenAI), Simple Vector Store, Message a Model.  
+- **Files:** [Download Workflow File](ai-csv-insight-bot-workflow.json)
 
 ---
 
