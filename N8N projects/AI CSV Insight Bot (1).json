@@ -1,0 +1,391 @@
+{
+  "name": "AI CSV Insight Bot",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        224
+      ],
+      "id": "b4c40aeb-945b-4d05-82ab-c7e0e278cfc8",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "fileSelector": "C:/Users/Earnest/Desktop/series/week13_data.csv",
+        "options": {
+          "dataPropertyName": "data"
+        }
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        224,
+        224
+      ],
+      "id": "6a97de51-5e22-4ab1-bbdb-48898e82b2ed",
+      "name": "Read/Write Files from Disk"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        448,
+        224
+      ],
+      "id": "be71e8f8-56d0-4a19-b3d0-6295ba29a743",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Take the first 100 rows for testing\nreturn items.slice(0, 100);\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        672,
+        224
+      ],
+      "id": "692587a2-bae0-458a-990c-75abf5a8a6c8",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "resource": "assistant",
+        "assistantId": {
+          "__rl": true,
+          "value": "asst_STZb14Cbb1T3P3wXbK9A9GEu",
+          "mode": "list",
+          "cachedResultName": "My Assistant"
+        },
+        "prompt": "define",
+        "text": "Analyze the attached COVID-19 dataset and summarize:\n- Top 5 countries by total cases\n- Correlation between vaccination rate and deaths\n- Any interesting trends or outliers\n",
+        "memory": "threadId",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1128,
+        -80
+      ],
+      "id": "2f79c132-9320-4e1e-9e67-4bc588b59343",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "8OadeSWJQpaoVGgE",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "assistant",
+        "operation": "create",
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "id"
+        },
+        "name": "My Assistant",
+        "description": "My Personal Assistant",
+        "instructions": "You are a rigorous data analyst. You will be given JSON containing pre-computed aggregates for multiple countries (fields: country, n_observations, last_total_cases, last_total_vaccinations, cases_slope_per_day, vax_slope_per_day, sample_dates_range). The user will ask a question about trends, comparisons or drivers. \n\nRules:\n1. Base conclusions on the provided numeric aggregates only. Do not hallucinate extra numbers.\n2. Where possible, name the top 3 countries relevant to the question and provide numeric evidence (use the fields given).\n3. If the question requires deeper computation (e.g., percent change between dates), compute it explicitly and show the calculation.\n4. If data is insufficient to answer confidently, say what is missing.\n5. Return JSON with keys: summary (short 2-3 lines), findings (array of bullets with numeric evidence), computations (any calculations), confidence (High/Medium/Low).\n",
+        "codeInterpreter": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        896,
+        224
+      ],
+      "id": "3d756142-aa91-42c6-acfa-58117ce001b1",
+      "name": "Create an assistant",
+      "alwaysOutputData": false,
+      "credentials": {
+        "openAiApi": {
+          "id": "8OadeSWJQpaoVGgE",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "description": "Global COVID-19 data providing aggregated statistics by country, including total cases, total vaccinations, and computed daily slopes for cases and vaccinations."
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1.1,
+      "position": [
+        1120,
+        144
+      ],
+      "id": "a9762b49-38e1-44bc-922d-443a0446ed56",
+      "name": "Answer questions with a vector store",
+      "notesInFlow": false
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "memoryKey": {
+          "__rl": true,
+          "mode": "list",
+          "value": "vector_store_key"
+        },
+        "embeddingBatchSize": 512
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+      "typeVersion": 1.3,
+      "position": [
+        1128,
+        424
+      ],
+      "id": "3aa46e7b-3eef-43d7-97dc-0969a5aaafaf",
+      "name": "Simple Vector Store"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        1264,
+        648
+      ],
+      "id": "8eddd5ab-430f-4e28-b0f2-99230cd8bea5",
+      "name": "Default Data Loader"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1136,
+        648
+      ],
+      "id": "b5592598-22d6-40bd-9823-7c70444e1e07",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "8OadeSWJQpaoVGgE",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1472,
+        272
+      ],
+      "id": "6fc99c71-4a16-42ce-a8ab-916b014f39d0",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "8OadeSWJQpaoVGgE",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "memoryKey": {
+          "__rl": true,
+          "mode": "list",
+          "value": "vector_store_key"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+      "typeVersion": 1.3,
+      "position": [
+        1488,
+        480
+      ],
+      "id": "c76abb90-6abb-43e6-8c9b-e4fb70883a65",
+      "name": "Simple Vector Store1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1600,
+        656
+      ],
+      "id": "b0f66275-04b5-40ae-bfcd-96e60da9fa67",
+      "name": "Embeddings OpenAI1",
+      "credentials": {
+        "openAiApi": {
+          "id": "8OadeSWJQpaoVGgE",
+          "name": "OpenAi account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Create an assistant",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create an assistant": {
+      "main": [
+        [
+          {
+            "node": "Simple Vector Store",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Answer questions with a vector store": {
+      "ai_tool": [
+        [
+          {
+            "node": "Message a model",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Vector Store": {
+      "ai_vectorStore": [
+        []
+      ],
+      "main": [
+        []
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Simple Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Simple Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Answer questions with a vector store",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Vector Store1": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Answer questions with a vector store",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Simple Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "ab5b9692-b6c9-4e99-a2e6-5c4448fabe31",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "3a397c18810408374f1731f2744c2733a2307f111b69413a7ecd0cca5ab48586"
+  },
+  "id": "ecIKKskczH2PUSwH",
+  "tags": []
+}
