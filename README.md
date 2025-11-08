@@ -1,6 +1,6 @@
 # 📊 Data Science & Statistics Portfolio
 
-Welcome to my portfolio — a collection of projects in **R**, **Python**, **Excel**, **SPSS**, **Tableau**, **STATA**, **PowerBI**, **PSPP** and **n8n*. These projects demonstrate my skills in data cleaning, exploratory data analysis (EDA), visualization, statistical modeling, Automation and Business Inteligence.
+Welcome to my portfolio — a collection of projects in **R**, **Python**, **Excel**, **SPSS**, **Tableau**, **STATA**, **PowerBI**, **PSPP** and **n8n**. These projects demonstrate my skills in data cleaning, exploratory data analysis (EDA), visualization, statistical modeling, Automation and Business Inteligence.
 
 ---
 
