@@ -30,5 +30,10 @@ Each project includes Excel workbooks, charts, and in some cases, macros or Pivo
   📜 Prepared by **Earnest Ouma Andele**
 ---
 
+### 4. Kenya Alcohol Distribution Analytics Dashboard
+- **Description:** Excel-based business intelligence dashboard analyzing alcohol distribution performance across regions in Kenya.
+- **Key Insights:** Revenue trends, product performance, customer segmentation, monthly trends, KPI tracking.
+- **Files:**  [Download Excel File](Kenya_Alcohol_Distribution_Dashboard.xlsm)
+
 
 📌 More projects will be added regularly
